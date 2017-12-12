@@ -2,17 +2,15 @@
 <html>
   <head>
     <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/javascripts/gender.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <form action="/gender" method="post" class="board-form">
-        <h1><%= title %></h1>
-        <input type="text" name="gender" class="input" required>
-        <div onclick="postData(0)">男</div>
-        <div onclick="postData(1)">女</div>
+    <div id="wrapper" class="gender">
+        <div class="circle" onclick="postData(0)">male</div>
+        <div class="circle" onclick="postData(1)">female</div>
       </form>
     </div>
   </body>

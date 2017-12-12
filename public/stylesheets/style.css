@@ -26,6 +26,12 @@ a {
   align-items: center;
 }
 
+.gender{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
 .circle {
   position: relative;
   width: 35vw;
