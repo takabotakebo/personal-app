@@ -2,11 +2,17 @@
 <html>
   <head>
     <title><%= title %></title>
+    <!-- 拡大を禁止 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/gender">始める</a>
+    <div id="wrapper" class="one-center">
+    <a href="/gender">
+      <div class="circle">
+        <span>始める</span>
+      </div>
+    </a>
+    </div>
   </body>
 </html>
