@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/weight.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="/weight" name="mainform" method="post" class="board-form">
+        <h1><%= title %></h1>
+        <input type="text" name="weight" class="input" required><br> <br>
+        <div onclick="postData()">次へ</div>
+      </form>
+    </div>
+  </body>
+</html>

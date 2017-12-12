@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/born.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="/born" name="mainform" method="post" class="board-form">
+        <h1><%= title %></h1>
+        <input type="text" name="bornY" class="input" required><br> <br>
+        <input type="text" name="bornM" class="input" required><br> <br>
+        <input type="text" name="bornD" class="input" required><br> <br>
+        <div onclick="postData()">次へ</div>
+      </form>
+    </div>
+  </body>
+</html>

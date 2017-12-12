@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="/gender" method="post" class="board-form">
+        <h1><%= title %></h1>
+        <input type="text" name="gender" class="input" required>
+        <div onclick="sendData('gender',0,'height')">男</div>
+        <div onclick="sendData('gender',1,'height')">女</div>
+      </form>
+    </div>
+  </body>
+</html>
