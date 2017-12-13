@@ -8,11 +8,7 @@
   </head>
   <body>
     <div id="wrapper" class="height" >
-      <form action="/height" name="mainform" method="post" class="board-form">
-        <h1><%= title %></h1>
-        <input type="text" name="height" class="input" required><br> <br>
-        <div onclick="postData()">次へ</div>
-      </form>
+      <div class="gonext" onclick="postData()">次へ</div>
 
       <div class="slidebar">
         <input type="range" class="rangeheight" min="0" max="250" step="1" value="5" >

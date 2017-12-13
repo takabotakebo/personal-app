@@ -18,15 +18,17 @@ router.post('/', function(req, res, next) {
   var name = req.body.data;
   name = JSON.parse(name);
   var createdAt = req.body.createdAt;
+  var endAt = moment().format('YYYY-MM-DD HH:mm:ss');
 
   console.log(name);
   console.log("Firstname is : " + name.firstname + "    Steoke is : " + getStrokes(name.firstname));
   console.log("Familyname is : " + name.familyname + "    Steoke is : " + getStrokes(name.familyname));
   console.log("DATETIME is : " + createdAt);
+  console.log("End At:" + endAt);
 
 
   // update statment
-  var query = 'UPDATE personaldatas SET name_first = "' + name.firstname + '", name_family = "' + name.familyname + '" WHERE created_at = "' + createdAt + '"';
+  var query = 'UPDATE personaldatas SET name_first = "' + name.firstname + '", name_family = "' + name.familyname + '", end_at = "'+ endAt + '" WHERE created_at = "' + createdAt + '"';
 
   connection.query(query, function(err, rows) {
     if (err) {

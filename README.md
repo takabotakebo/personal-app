@@ -51,8 +51,9 @@ CREATE TABLE `personaldatas` (
   `name_first` text,
   `name_family` text,
   `created_at` datetime DEFAULT NULL,
+  `end_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 
 ```

@@ -20,6 +20,13 @@ a {
   background-color: #232323 ;
 }
 
+.gonext {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  color: red;
+}
+
 .index {
   display: flex;
   justify-content: center;
