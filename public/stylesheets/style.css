@@ -48,6 +48,14 @@ a {
   padding: 0 20vw 0 10vw;
 }
 
+.weight {
+  display: flex;
+  align-content: space-around ;
+  flex-wrap: wrap;
+  height: 70vh !important;
+  padding:12vh 0 18vh 0;
+}
+
 .circle {
   position: relative;
   width: 35vw;
@@ -118,6 +126,25 @@ a {
   width: 70vh !important;
 }
 
+.weight .slidebar{
+  display: block;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.weight .slidebardata{
+  display: block;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+
+.rangeweight {
+  width: 50vw !important;
+  margin: 0 auto;
+}
 
 input[type="range"] {
   position: relative;

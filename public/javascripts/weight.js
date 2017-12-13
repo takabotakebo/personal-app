@@ -5,7 +5,7 @@ function postData(){
   console.log("Send Data as POST");
 
   //フォームの内容を取得する処理
-  var answer = document.forms.mainform.weight.value;
+  var answer = document.querySelector('.rangeweight').value;
   console.log("Answer is:" + answer);
 
   $.ajax(
