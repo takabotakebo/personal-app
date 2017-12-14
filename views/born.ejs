@@ -3,18 +3,81 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/javascripts/born.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <form action="/born" name="mainform" method="post" class="board-form">
-        <h1><%= title %></h1>
-        <input type="text" name="bornY" class="input" required><br> <br>
-        <input type="text" name="bornM" class="input" required><br> <br>
-        <input type="text" name="bornD" class="input" required><br> <br>
-        <div onclick="postData()">次へ</div>
-      </form>
+    <div id="wrapper" class="born">
+      <div class="gonext" onclick="postData()"><img src="/images/next.svg"></div>
+
+      <div class="datesbox">
+
+        <div class="slidebar">
+          <input type="range" class="rangedateY" min="1900" max="2019" step="1" value="2000" >
+          <script>
+            var elem1 = document.querySelector('.rangedateY');
+            var rangeValue1 = function(){
+              var newValue1 = elem1.value;
+              var target1 = document.querySelector('.valuedateY');
+              target1.innerHTML = newValue1;
+            }
+            elem1.addEventListener("input", rangeValue1);
+          </script>
+        </div>
+
+        <div class="slidebardata">
+          <p class="YMD">Y</p>
+          <p class="unit"><span class="rangevalue valuedate valuedateY">2000</span></p>
+        </div>
+
+      </div>
+
+
+      <div class="datesbox">
+
+        <div class="slidebar">
+          <input type="range" class="rangedateM" min="1" max="12" step="1" value="1" >
+          <script>
+            var elem2 = document.querySelector('.rangedateM');
+            var rangeValue2 = function(){
+              var newValue2 = elem2.value;
+              var target2 = document.querySelector('.valuedateM');
+              target2.innerHTML = newValue2;
+            }
+            elem2.addEventListener("input", rangeValue2);
+          </script>
+        </div>
+
+        <div class="slidebardata">
+          <p class="YMD M">M</p>
+          <p class="unit"><span class="rangevalue valuedate valuedateM">1</span></p>
+        </div>
+
+      </div>
+
+      <div class="datesbox">
+
+        <div class="slidebar">
+          <input type="range" class="rangedateD" min="1" max="31" step="1" value="1" >
+          <script>
+            var elem3 = document.querySelector('.rangedateD');
+            var rangeValue3 = function(){
+              var newValue3 = elem3.value;
+              var target3 = document.querySelector('.valuedateD');
+              target3.innerHTML = newValue3;
+            }
+            elem3.addEventListener("input", rangeValue3);
+          </script>
+        </div>
+
+        <div class="slidebardata">
+          <p class="YMD">D</p>
+          <p class="unit"><span class="rangevalue valuedate valuedateD">1</span></p>
+        </div>
+
+      </div>
+
+
     </div>
   </body>
 </html>

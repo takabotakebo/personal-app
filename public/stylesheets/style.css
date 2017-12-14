@@ -1,11 +1,12 @@
 * {
   margin: 0 0;
   padding: 0 0;
+  font:  Impact;
 }
 
 body {
   padding: 0px;
-  font:  Helvetica, Arial, sans-serif;
+  font:  Impact;
   background-color: #232323 ;
 }
 
@@ -18,13 +19,21 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: #232323 ;
+  font:  Impact;
 }
 
 .gonext {
   position: fixed;
+  width: 80px;
   bottom: 50px;
   right: 50px;
   color: red;
+  cursor: pointer;
+}
+
+.gonext img {
+  width: 80px;
+  position: relative;
 }
 
 .index {
@@ -56,6 +65,11 @@ a {
   padding:12vh 0 18vh 0;
 }
 
+.born {
+  height: 70vh !important;
+  padding:12vh 0 18vh 0;
+}
+
 .circle {
   position: relative;
   width: 35vw;
@@ -70,10 +84,6 @@ a {
   text-decoration: none;
   color: white;
   font-size: 4vw;
-}
-
-.board-form{
-  display: none;
 }
 
 .unit{
@@ -140,10 +150,98 @@ a {
   justify-content: center;
 }
 
-
 .rangeweight {
   width: 50vw !important;
   margin: 0 auto;
+}
+
+
+.born .slidebar{
+  display: block;
+  width: 35vw !important;
+  display: flex;
+  justify-content: center;
+}
+
+.rangedateY {
+  position: absolute;
+  width: 35vw !important;
+  left: 0px;
+  top:calc(5vh + 5px);
+}
+
+.rangedateM {
+  position: absolute;
+  width: 35vw !important;
+  left: 0px;
+  top:calc(5vh + 5px);
+}
+
+.rangedateD {
+  position: absolute;
+  width: 35vw !important;
+  left: 0px;
+  top:calc(5vh + 5px);
+}
+
+.datesbox {
+  position: relative;
+  width: 70vw;
+  height: 10vh;
+  margin: 10vh auto 10vh auto;
+}
+
+.valuedate {
+  font-size: 1.2em;
+}
+
+.born .unit{
+  position: absolute;
+  right: 0px;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.born .YMD{
+  position: absolute;
+  right: 6em;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+}
+
+.born .M {
+  right: 5.9em !important;
+}
+
+.inputname {
+  padding: 10px 20px 10px 20px;
+  width:30vw;
+  height: 60px;
+  box-shadow:0px 0px 10px #CAFFFE;
+  outline: none;
+  border: 1px solid #DDD;
+  border-radius: 20px;
+  font-size: 3em;
+  color: #666565;
+}
+
+.board-form-name {
+  width:70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+::-webkit-input-placeholder {
+    color: #DDDDDD;
 }
 
 input[type="range"] {

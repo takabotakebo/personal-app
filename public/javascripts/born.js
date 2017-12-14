@@ -6,9 +6,9 @@ function postData(){
 
   //フォームの内容を取得する処理
   var answer = {
-    "born_y" : document.forms.mainform.bornY.value,
-    "born_m" : document.forms.mainform.bornM.value,
-    "born_d" : document.forms.mainform.bornD.value
+    "born_y" : document.querySelector('.rangedateY').value,
+    "born_m" : document.querySelector('.rangedateM').value,
+    "born_d" : document.querySelector('.rangedateD').value
   };
   answer = JSON.stringify(answer);
 

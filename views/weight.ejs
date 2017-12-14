@@ -3,18 +3,13 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/javascripts/weight.js"></script>
   </head>
   <body>
     <div id="wrapper" class="weight">
-      <form action="/weight" name="mainform" method="post" class="board-form">
-        <h1><%= title %></h1>
-        <input type="text" name="weight" class="input" required><br> <br>
-        <div onclick="postData()">次へ</div>
-      </form>
 
-      <div class="gonext" onclick="postData()">次へ</div>
+      <div class="gonext" onclick="postData()"><img src="/images/next.svg"></div>
 
       <div class="slidebardata">
         <p class="unit"><span class="rangevalue valueweight">30</span>kg</p>
@@ -32,7 +27,6 @@
           elem.addEventListener("input", rangeValue);
         </script>
       </div>
-
 
     </div>
   </body>

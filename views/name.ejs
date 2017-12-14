@@ -3,17 +3,17 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/javascripts/name.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <form action="/name" name="mainform" method="post" class="board-form">
-        <h1><%= title %></h1>
-        <input type="text" name="firstname" class="input" required><br> <br>
-        <input type="text" name="familyname" class="input" required><br> <br>
-        <div onclick="postData()">次へ</div>
+    <div id="wrapper" class="name">
+      <form action="/name" name="mainform" method="post" class="board-form-name">
+        <input type="text" name="familyname" class="inputname" placeholder="FAMILYNAME" value="" >
+        <input type="text" name="firstname" class="inputname" placeholder="FIRSTNAME" value="" >
       </form>
+
+      <div class="gonext" onclick="postData()"><img src="/images/next.svg"></div>
     </div>
   </body>
 </html>
