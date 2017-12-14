@@ -10,8 +10,8 @@
   <body>
     <div id="wrapper" class="name">
       <form action="/name" name="mainform" method="post" class="board-form-name">
-        <input type="text" name="familyname" class="inputname" placeholder="FAMILYNAME" value="" >
-        <input type="text" name="firstname" class="inputname" placeholder="FIRSTNAME" value="" >
+        <input type="text" name="familyname" class="inputname" placeholder="FAMILYNAME" value="" onkeypress="my.onkeypress()">
+        <input type="text" name="firstname" class="inputname" placeholder="FIRSTNAME" value="" onkeypress="my.onkeypress()">
       </form>
 
       <div class="gonext" onclick="postData()"><img src="/images/next.svg"></div>
