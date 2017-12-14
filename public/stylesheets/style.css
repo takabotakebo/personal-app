@@ -8,6 +8,13 @@ body {
   padding: 0px;
   font:  Impact;
   background-color: #232323 ;
+  overflow: hidden;
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
 }
 
 a {
