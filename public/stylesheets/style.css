@@ -20,6 +20,11 @@ a {
   height: 100vh;
   background-color: #232323 ;
   font:  Impact;
+  opacity: 0;
+  transition: 2s;
+}
+.show {
+  opacity: 1 !important;
 }
 
 .gonext {
