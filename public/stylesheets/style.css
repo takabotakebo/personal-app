@@ -39,13 +39,21 @@ a {
   width: 80px;
   bottom: 50px;
   right: 50px;
-  color: red;
   cursor: pointer;
 }
 
 .gonext img {
   width: 80px;
   position: relative;
+}
+
+.bread{
+  position: fixed;
+  width: 80px;
+  bottom: 50px;
+  left: calc(50vw - 40px);
+  color: red;
+  cursor: pointer;
 }
 
 .index {
@@ -96,6 +104,10 @@ a {
   text-decoration: none;
   color: white;
   font-size: 4vw;
+}
+
+.index .circle {
+  animation: staticEffectRipple 3s ease infinite;
 }
 
 .unit{
@@ -310,4 +322,30 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 input[type="range"]::-webkit-slider-thumb:active {
   transform: scale(1.6);
+}
+
+
+
+@-webkit-keyframes staticEffectRipple {
+  0%{
+    box-shadow:0px 0px 10px rgba(202,255,254,1);
+  }
+  80%{
+    box-shadow:0px 0px 100px rgba(202,255,254,0.7);
+  }
+  100%{
+    box-shadow:0px 0px 100px rgba(202,255,254,0);
+  }
+}
+
+@keyframes staticEffectRipple {
+  0%{
+    box-shadow:0px 0px 10px rgba(202,255,254,1);
+  }
+  80%{
+    box-shadow:0px 0px 100px rgba(202,255,254,0.7);
+  }
+  100%{
+    box-shadow:0px 0px 100px rgba(202,255,254,0);
+  }
 }
