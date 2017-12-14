@@ -20,6 +20,9 @@ router.post('/', function(req, res, next) {
   var createdAt = req.body.createdAt;
   var endAt = moment().format('YYYY-MM-DD HH:mm:ss');
 
+  name.firstname = name.firstname.toUpperCase();
+  name.familyname = name.familyname.toUpperCase()
+
   console.log(name);
   console.log("Firstname is : " + name.firstname + "    Steoke is : " + getStrokes(name.firstname));
   console.log("Familyname is : " + name.familyname + "    Steoke is : " + getStrokes(name.familyname));
