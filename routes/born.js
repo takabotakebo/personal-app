@@ -35,9 +35,9 @@ router.post('/', function(req, res, next) {
       console.log("Saved DB born: " + born);
 
       //データを送信
-      send_osc.send('/born_y',born.born_y);
-      send_osc.send('/born_m',born.born_m);
-      send_osc.send('/born_d',born.born_d);
+      send_osc.send('/born_y',Number(born.born_y));
+      send_osc.send('/born_m',Number(born.born_m));
+      send_osc.send('/born_d',Number(born.born_d));
 
       res.header('Content-Type', 'application/json; charset=utf-8')
       res.send(born);

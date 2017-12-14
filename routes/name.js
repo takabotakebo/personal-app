@@ -38,8 +38,8 @@ router.post('/', function(req, res, next) {
       console.log("Saved DB name: " + name);
 
       //データを送信
-      send_osc.send('/name_first',getStrokes(name.firstname));
-      send_osc.send('/name_family',getStrokes(name.familyname));
+      send_osc.send('/name_first',Number(getStrokes(name.firstname)));
+      send_osc.send('/name_family',Number(getStrokes(name.familyname)));
 
       res.header('Content-Type', 'application/json; charset=utf-8')
       res.send(name);

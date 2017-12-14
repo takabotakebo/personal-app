@@ -32,7 +32,7 @@ router.post('/', function(req, res, next) {
       console.log("Saved DB weight: " + weight);
 
       //データを送信
-      send_osc.send('/weight',weight);
+      send_osc.send('/weight',Number(weight));
 
       res.header('Content-Type', 'application/json; charset=utf-8')
       res.send(weight);

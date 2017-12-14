@@ -13,7 +13,7 @@ var send_osc = new osc.Client(ipAdrress, 4000);
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //データを送信
-  send_osc.send('/reset',"reset");
+  send_osc.send('/reset',1);
 
   res.render('gender', { title: 'Gender' });
 });
@@ -37,7 +37,7 @@ router.post('/', function(req, res, next) {
       var data = {"createdAt": createdAt}
 
       //データを送信
-      send_osc.send('/gender',gender);
+      send_osc.send('/gender',Number(gender));
 
       res.header('Content-Type', 'application/json; charset=utf-8');
       res.send(data);
