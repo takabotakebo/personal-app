@@ -1,8 +1,8 @@
 $(function() {
 
   $(document).ready(function() {
-    // class'show'をdiv要素に追加
-    $('#wrapper').addClass('show');
+      // class'show'をdiv要素に追加
+      $('#wrapper').addClass('show');
   });
 
   window.my = {};
@@ -15,5 +15,9 @@ $(function() {
       // ENTERが押下された時はfalseを返す。理由はPOSTリクエストを送信させないため。
       return event.keyCode != ENTER_KEY_CODE;
   }
+
+  $("#wrapper").click(function(){
+      $("inputname").blur();
+  });
 
 });

@@ -41,8 +41,8 @@ router.post('/', function(req, res, next) {
       console.log("Saved DB name: " + name);
 
       //データを送信
-      send_osc.send('/name_first',Number(getStrokes(name.firstname)));
-      send_osc.send('/name_family',Number(getStrokes(name.familyname)));
+      send_osc.send('/name_first',getStrokes(name.firstname));
+      send_osc.send('/name_family',getStrokes(name.familyname));
 
       res.header('Content-Type', 'application/json; charset=utf-8')
       res.send(name);
@@ -55,7 +55,7 @@ router.post('/', function(req, res, next) {
 
 function getStrokes(text){
   var textArray = text.split('');
-  var stroke = 0;
+  var stroke = [];
 
   for (var i = 0; i < textArray.length; i++) {
     switch ( textArray[i] ) {
@@ -64,7 +64,7 @@ function getStrokes(text){
       case "O":
       case "S":
       case "U":
-          stroke = stroke + 1 ;
+          stroke.push(1);
           break;
       case "B":
       case "D":
@@ -76,7 +76,7 @@ function getStrokes(text){
       case "V":
       case "X":
       case "Z":
-          stroke = stroke + 2 ;
+          stroke.push(2);
           break;
       case "A":
       case "F":
@@ -86,12 +86,12 @@ function getStrokes(text){
       case "N":
       case "R":
       case "Y":
-          stroke = stroke + 3 ;
+          stroke.push(3);
           break;
       case "E":
       case "M":
       case "W":
-          stroke = stroke + 4 ;
+          stroke.push(4);
           break;
       default:
           console.log("ERROR");
