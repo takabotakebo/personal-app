@@ -252,14 +252,14 @@ a {
 
 .born .YMD{
   position: absolute;
-  right: 6em;
+  right: 4.5em;
   font-size: 3em;
   font-weight: bold;
   color: white;
 }
 
 .born .M {
-  right: 5.9em !important;
+  right: 4.4em !important;
 }
 
 .inputname {
