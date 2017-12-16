@@ -116,10 +116,22 @@ a {
   text-decoration: none;
   color: white;
   font-size: 4vw;
+  text-align: center;
+  line-height: 3.5vw;
 }
 
 .index .circle {
   animation: staticEffectRipple 3s ease infinite;
+}
+
+.circle p{
+  position: relative;
+  top :15px;
+}
+
+.taptostart {
+  font-size: 1.2vw;
+  animation: fadeInOut 3s ease infinite;
 }
 
 .unit{
@@ -383,5 +395,35 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
   100%{
     box-shadow:0px 0px 100px rgba(202,255,254,0);
+  }
+}
+
+@-webkit-keyframes fadeInOut {
+  0%{
+    opacity: 0
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0%{
+    opacity: 0
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }
