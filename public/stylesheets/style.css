@@ -57,20 +57,19 @@ a {
   width: 15px;
   height: 15px;
   background-color: white;
-  display: none;
 }
 
 .startbutton {
   position: fixed;
   bottom: 15px;
   left: 15px;
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  border-top: 15px solid white;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  width: 0px;
+  height: 0px;
+  border:13px solid transparent;
+  border-left: 15px solid white;
+  display: none;
 }
+
 
 .gonext:active{
   opacity: 0.7;

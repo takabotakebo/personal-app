@@ -5,6 +5,7 @@
     <!-- 拡大を禁止 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <script src="/javascripts/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/index.js"></script>
     <script src="/javascripts/main.js"></script>
     <script>
       localStorage.removeItem("createdAt");
@@ -18,8 +19,8 @@
         <p>personal<br><span class="taptostart">tap to start</span></p>
       </div>
     </a>
-    <div class="stopbutton"></div>
-    <div class="startbutton"></div>
+    <div class="stopbutton" onclick="postDataStop()"></div>
+    <div class="startbutton" onclick="postDataStart()"></div>
     </div>
   </body>
 </html>
