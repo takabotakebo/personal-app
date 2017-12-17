@@ -29,6 +29,7 @@ a {
   font:  Impact;
   opacity: 0;
   transition: 2s;
+  z-index: 1;
 }
 .show {
   opacity: 1 !important;
@@ -47,6 +48,28 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.stopbutton {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  display: none;
+}
+
+.startbutton {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-top: 15px solid white;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
 }
 
 .gonext:active{
@@ -68,6 +91,35 @@ a {
   cursor: pointer;
 }
 
+#discription {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255,255,255,0.95);
+  color: #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  animation: descriptionfadeOut 12s ease ;
+  animation-fill-mode: forwards;
+}
+
+.delete {
+  animation: descriptionfadeOut 1s ease !important;
+}
+
+#discription p{
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: "游明朝" ,YuMincho !important;
+}
+
+.asklist {
+  line-height: 150px;
+  font-size: 2.2vw;
+}
 .index {
   display: flex;
   justify-content: center;
@@ -425,5 +477,37 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
   100%{
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes descriptionfadeOut {
+  0%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes descriptionfadeOut {
+  0%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
   }
 }
