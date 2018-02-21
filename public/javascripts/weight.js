@@ -7,14 +7,21 @@ function postData(){
   //フォームの内容を取得する処理
   var answer = document.querySelector('.rangeweight').value;
   console.log("Answer is:" + answer);
-
+  localStorage.setItem("weight",answer);
   $.ajax(
     {
       url: "/weight",
       type:'POST',
       dataType: 'json',
       data : {
-        data : answer,
+        gender : localStorage.getItem("gender"),
+        height : localStorage.getItem("height"),
+        weight : localStorage.getItem("weight"),
+        born_y : localStorage.getItem("born_y"),
+        born_m : localStorage.getItem("born_m"),
+        born_d : localStorage.getItem("born_d"),
+        firstname : localStorage.getItem("firstname"),
+        familyname : localStorage.getItem("familyname"),
         createdAt : localStorage.getItem("createdAt")
       },
       timeout:10000,

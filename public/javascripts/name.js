@@ -9,9 +9,10 @@ function postData(){
     "firstname" : document.forms.mainform.firstname.value,
     "familyname" : document.forms.mainform.familyname.value
   };
-  answer = JSON.stringify(answer);
 
-  console.log("Answer is:" + JSON.stringify(answer));
+  //大文字に変換してlocalStoregeへ
+  localStorage.setItem("firstname",answer.firstname.toUpperCase());
+  localStorage.setItem("familyname",answer.familyname.toUpperCase());
 
   $.ajax(
     {
@@ -19,7 +20,14 @@ function postData(){
       type:'POST',
       dataType: 'json',
       data : {
-        data : answer,
+        gender : localStorage.getItem("gender"),
+        height : localStorage.getItem("height"),
+        weight : localStorage.getItem("weight"),
+        born_y : localStorage.getItem("born_y"),
+        born_m : localStorage.getItem("born_m"),
+        born_d : localStorage.getItem("born_d"),
+        firstname : localStorage.getItem("firstname"),
+        familyname : localStorage.getItem("familyname"),
         createdAt : localStorage.getItem("createdAt")
       },
       timeout:10000,
@@ -27,7 +35,6 @@ function postData(){
   ).done(
     function(data) {
       console.log("It works");
-      localStorage.removeItem("createdAt");
       window.location.href = '/';
     }
   ).fail(

@@ -1,3 +1,8 @@
+var sendData = {
+  gender : localStorage.getItem("gender")
+};
+
+console.log(sendData);
 console.log("DATETIME is :" + localStorage.getItem("createdAt"));
-localStorage.removeItem("createdAt");
-console.log("DELETE DATETIME");
+localStorage.clear();
+console.log("DELETE LOCALSTRAGE");

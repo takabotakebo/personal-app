@@ -16,26 +16,45 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/', function(req, res, next) {
-  var weight = req.body.data;
-  var createdAt = req.body.createdAt;
-  console.log("Weight is : " + weight);
-  console.log("DATETIME is : " + createdAt);
+  var receivedData = {
+    gender : req.body.gender,
+    height : req.body.height,
+    weight : req.body.weight,
+    born_y : req.body.born_y,
+    born_m : req.body.born_m,
+    born_d : req.body.born_d,
+    firstname : req.body.firstname,
+    familyname : req.body.familyname,
+    createdAt : req.body.createdAt
+  };
+
+  console.log("Weight is : " + receivedData.weight);
+  console.log("DATETIME is : " + receivedData.createdAt);
 
   // update statment
-  var query = 'UPDATE personaldatas SET weight = "' + weight + '" WHERE created_at = "' + createdAt + '"';
+  var query = 'UPDATE personaldatas SET weight = "' + receivedData.weight + '" WHERE created_at = "' + receivedData.createdAt + '"';
 
   connection.query(query, function(err, rows) {
     if (err) {
       console.log(err);
       return;
     } else{
-      console.log("Saved DB weight: " + weight);
+      console.log("Saved DB weight: " + receivedData.weight);
 
       //データを送信
-      send_osc.send('/weight',Number(weight));
+      send_osc.send('/data',
+        Number(receivedData.gender),
+        Number(receivedData.height),
+        Number(receivedData.weight),
+        Number(receivedData.born_y),
+        Number(receivedData.born_m),
+        Number(receivedData.born_d),
+        Number(receivedData.firstname),
+        Number(receivedData.familyname)
+      );
 
       res.header('Content-Type', 'application/json; charset=utf-8')
-      res.send(weight);
+      res.send(receivedData.weight);
     }
   });
 
