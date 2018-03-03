@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var moment = require('moment'); // DATETIME取得のモジュールのインポート
+var connection = require('../mysqlConnection'); // mysqlの設定のインポート
 const osc = require('node-osc');//OSC のインポート
 
 //IPアドレスの指定
