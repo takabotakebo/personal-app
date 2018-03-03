@@ -50,6 +50,21 @@ a {
   align-items: center;
 }
 
+.skip {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  bottom: 200px;
+  right: 50px;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0);
+  animation: staticEffectRipple2 3s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .stopbutton {
   position: fixed;
   bottom: 25px;
@@ -80,6 +95,17 @@ a {
   position: relative;
   margin: 0 0px 0 5px;
 }
+
+.skip:active{
+  opacity: 0.7;
+}
+
+.skip img {
+  width: 80px;
+  position: relative;
+  margin: 0 0px 0 5px;
+}
+
 
 .bread{
   position: fixed;
