@@ -11,7 +11,16 @@ var send_osc = new osc.Client(ipAdrress, 4000);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var query = 'SELECT * FROM personaldatas ORDER by id DESC LIMIT 5';
+
+  connection.query(query, function(err, rows) {
+    console.log(rows);
+    res.render('index', {
+      title: 'Express' ,
+      answerList: rows
+    });
+  });
+
 });
 
 

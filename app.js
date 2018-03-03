@@ -13,6 +13,7 @@ var weight = require('./routes/weight');
 var born = require('./routes/born');
 var name = require('./routes/name');
 var errorpage = require('./routes/errorpage');
+var logsound = require('./routes/logsound');
 
 
 var app = express();
@@ -38,6 +39,7 @@ app.use('/weight', weight);
 app.use('/born', born);
 app.use('/name', name);
 app.use('/errorpage', errorpage);
+app.use('/logsound', logsound);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

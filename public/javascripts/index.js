@@ -61,3 +61,31 @@ function postDataStart(){
   )
 
 }
+
+
+// APIにPOSTリクエストを送る
+function postDataLog(logNum){
+  console.log("Send Data as POST");
+  console.log("LogNum is:" + logNum);
+
+  $.ajax(
+    {
+      url: "/logsound",
+      type:'POST',
+      dataType: 'json',
+      data : {
+        data : logNum
+      },
+      timeout:10000,
+    }
+  ).done(
+    function(data) {
+      console.log("It works");
+    }
+  ).fail(
+    function(XMLHttpRequest, textStatus, errorThrown) {
+      window.location.href = '/errorpage';
+    }
+  )
+
+}

@@ -19,6 +19,15 @@
         <p>personal<br><span class="taptostart">tap to start</span></p>
       </div>
     </a>
+
+    <div class="logs">
+      <% answerList.forEach(function(answerItem) { %>
+      <div class="log-sound" onclick="postDataLog(<%= answerItem.id %>)">
+        <p><%= answerItem.created_at %></p>
+      </div>
+      <% }); %>
+    </div>
+
     <div class="stopbutton" onclick="postDataStop()"></div>
     <div class="startbutton" onclick="postDataStart()"></div>
     </div>
