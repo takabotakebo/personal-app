@@ -52,6 +52,14 @@ a {
   padding: 40px 10px 0 0;
 }
 
+.logs .label{
+  position: absolute;
+  left:55px;
+  top: -15px;
+  color: white;
+  font-size: 15px;
+}
+
 .log-sound {
   position: relative;
   width: 100px;
@@ -62,7 +70,7 @@ a {
   background-color: rgba(0,0,0,0);
   animation: staticEffectRipple2 3s ease infinite;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -113,8 +121,8 @@ a {
 
 .stopbutton {
   position: fixed;
-  bottom: 25px;
-  left: 25px;
+  top: 25px;
+  right: 25px;
   width: 15px;
   height: 15px;
   background-color: white;
@@ -122,8 +130,8 @@ a {
 
 .startbutton {
   position: fixed;
-  bottom: 25px;
-  left: 25px;
+  top: 25px;
+  right: 25px;
   width: 0px;
   height: 0px;
   border:13px solid transparent;
@@ -242,7 +250,7 @@ a {
   text-align: center;
   line-height: 3.5vw;
   right: 3vw;
-  bottom:50px;
+  bottom:60px;
   z-index: 3;
 }
 

@@ -21,6 +21,7 @@
     </a>
 
     <div class="logs">
+      <span class="label">Logs</span>
       <% answerList.forEach(function(answerItem) { %>
       <div class="log-sound" onclick="postDataLog(<%= answerItem.id %>)">
         <p><%= answerItem.created_at %></p>
