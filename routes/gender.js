@@ -13,7 +13,7 @@ var send_osc = new osc.Client(ipAdrress, 4000);
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //データを送信
-  send_osc.send('/reset',1);
+  send_osc.send('/data',0,0,0,0,0,0,0,0);
 
   res.render('gender', { title: 'Gender' });
 });
